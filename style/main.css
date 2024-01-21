@@ -401,6 +401,7 @@ a:focus, button:focus {
   margin-bottom: 0;
 }
 .features .sub-title {
+  width: 100%;
   margin-bottom: 20px;
   text-align: start;
   font-size: 22px;
@@ -507,7 +508,8 @@ a:focus, button:focus {
     top: unset;
     inset-inline-end: 0;
     left: 50%;
-    transform: translateX(-50%);
+    margin-left: -160px;
+    transform: unset;
   }
   .features {
     padding-bottom: 540px;
