@@ -1,0 +1,205 @@
+
+.features{
+    direction: rtl;
+    overflow: hidden;
+   padding: 50px 0;
+    .features-bg{
+        background-color: $second-color;
+        padding-top: 110px;
+        padding-bottom: 100px;
+        height: 822px;
+    }
+    // overflow-y: visible;
+    // overflow-x: hidden;
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     background-color: #fff;
+    //     background-color: red;
+    //     height: 45px;
+    //     z-index: 2;
+    //     width: 100%;
+    // }
+    // &::before{
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0;
+    //     background-color: #fff;
+    //     background-color: greenyellow;
+    //     height: 45px;
+    //     z-index: 2;
+    //     width: 100%;
+    // }
+    
+    .titles-parent{
+        align-items: flex-start;
+        margin-bottom: 45px;
+    }
+    position: relative;
+    .mobile-hand-img{
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        inset-inline-end: 70px;
+    }
+    .general-title {
+        text-align: start;
+        // width: 513px;
+        font-size: 34px;
+        line-height: 50px;
+        color: #ffffff;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .sub-title{
+        margin-bottom: 20px;
+        text-align: start;
+        font-size: 22px;
+        color: $main-color;
+        font-weight: 400;
+    }
+    
+}
+.features-parent{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.features-cont {
+    width: 540px;
+}
+.list-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    .item-title{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 50px;
+        color: #ffffff;
+        margin: 0;
+        margin-inline-start: 22px;
+    }
+    .icon-circle{
+        flex-shrink: 0;
+        width: 59px;
+        height: 59px;
+        border-radius: 50%;
+        background-color: $main-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // color: #fff;
+        .icon{
+            font-size: 24px;
+            text-align: center;
+            color: #ffffff;
+        }
+    }
+}
+.features-list{
+    display: flex;
+    flex-direction: column;
+}
+.features-list{
+    .list-item:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+
+@include max-1200{
+    .features .general-title{
+        font-size: 30px;
+        line-height: 1.5;
+    }
+    .features .mobile-hand-img{
+        max-width: 470px;
+        inset-inline-end: 0;
+        top: 75px;
+    }
+    
+    .features .features-bg{
+        height: auto;
+        padding: 70px 0;
+    }
+}
+
+@include max-992 {
+    .list-item .item-title{
+        line-height: 1.7;
+    }
+    .features .features-bg{
+        padding: 0;
+    }
+    
+    .features{
+        height: auto;
+        padding: 70px 0;
+        background-color: $second-color;
+    }
+    .features-cont{
+        width: 394px;
+    }
+    .features .mobile-hand-img{
+        position: absolute;
+        bottom: unset;
+        top: 50%;
+        transform: translateY(-50%);
+        inset-inline-end: 0;
+        max-width: 370px;
+    }
+    .features-parent{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@include max-768 {
+    .features-cont{
+        width: 100%;
+    }
+    .features .mobile-hand-img{
+        max-width: 320px;
+        bottom: 35px;
+        top: unset;
+        inset-inline-end: 0;
+        left: 50%;
+        transform: translateX(-50%);
+       
+    }
+    .features{
+        padding-bottom: 540px;
+        padding-top: 50px;
+    }
+    .features .general-title{
+        font-size: 21px;
+        line-height: 1.5;
+    }
+    .list-item .icon-circle{
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+    .list-item .icon-circle .icon{
+        font-size: 20px;
+    }
+    .list-item .item-title{
+        font-size: 18px;
+        line-height: 1.5;
+        margin-inline-start: 15px ;
+    }
+    .list-item{
+        margin-bottom: 15px;
+    }
+    .features .sub-title{
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+    .features .titles-parent{
+        margin-bottom: 40px;
+    }
+}
+
+

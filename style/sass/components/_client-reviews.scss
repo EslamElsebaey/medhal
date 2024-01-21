@@ -1,0 +1,268 @@
+.client-reviews{
+    overflow: hidden;
+    margin-top: 70px;
+    .mySwiper-parent{
+        padding-bottom: 35px;
+        padding-top: 20px;
+    }
+    .swiper-slide{
+        opacity: .5;
+    }
+    .swiper-slide-active  , .swiper-slide-next{
+        opacity: 1;
+    }
+    .swiper-slide-prev{
+        opacity: 0;
+    }
+   
+    .swiper-pagination{
+        display: none;
+    }
+    .swiper{
+        overflow: unset;
+    }
+    .reviewer{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .swiper-buttons{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 35px;
+        .swiper-button-next:after, .swiper-button-prev:after{
+            display: none;
+        }
+        div{
+            position: unset;
+            margin: 0;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            filter: drop-shadow(6.018px 7.986px 12.5px rgba(0,0,0,0.1));
+            background-color: #ffffff;
+            transition: all ease-in-out .2s;
+            &:hover{
+                background-color: $main-color;
+                i{
+                    color: #fff;
+                }
+            }
+            i{
+                font-size: 16px;
+                color: #999999;
+            }
+        }
+    }
+    .content{
+        position: relative;
+        padding-top: 20px;
+        z-index: 5;
+        background: #fff;
+        height: 100%;
+        &::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            inset-inline-start: 0;
+            width: 110%;
+            background-color: #fff;
+            inset-inline-start: -110%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    .general-title{
+        text-align: start;
+        line-height: 50px;
+    }
+    .sub-title{
+        text-align: start;
+        margin-bottom: 30px;
+    }
+    .item{
+        width: 361px;
+        border-radius: 15px;
+        padding: 32.2px 30px;
+        filter: drop-shadow(6.018px 7.986px 12.5px rgba(0,0,0,0.1));
+        background-color: #ffffff;
+        .icon{
+            font-size: 48px;
+            color: $main-color;
+        }
+        .quote-text{
+            // width: 295px;
+            // height: 139px;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            white-space: normal;
+
+            height: 145px;
+            text-align: justify;
+            font-size: 16px;
+            line-height: 30px;
+            color: $second-color;
+            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .reviewer-img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ededed;
+            i{
+                font-size: 20px;
+                color: #999999;
+            }
+        }
+        .name{
+            font-size: 16px;
+            color: #000000;
+            font-weight: 700;
+            margin-inline-start: 10px;
+        }
+    }
+    .swiper-slide-prev{
+        .item{
+            filter: none;
+        }
+    }
+}
+
+
+html[dir="ltr"]{
+    .client-reviews .swiper-buttons div i{
+        transform: rotate(180deg);
+    }
+}
+
+
+@include max-992 {
+   
+    .client-reviews {
+        .item .quote-text{
+            height: auto;
+        }
+        .swiper-pagination{
+            display: flex;
+            bottom: 35px;
+            justify-content: center;
+            .swiper-pagination-bullet{
+                opacity: 0.302;
+                background-color: #000;
+            }
+            .swiper-pagination-bullet-active{
+                background-color: $main-color;
+                opacity: 1;
+            }
+        }
+        .row {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+        }
+        .sub-title{
+            text-align: center;
+        }
+        .general-title{
+            text-align: center;
+            font-size: 29px;
+            line-height: 1.5;
+        }
+        .swiper-buttons{
+            justify-content: center;
+        }
+        .content::after{
+            display: none;
+        }
+        .swiper{
+            overflow: hidden;
+            padding: 20px;
+        }
+        .item{
+            width: 100%;
+            padding: 25px;
+            // padding: 25px 20px;
+            filter: drop-shadow(2.018px 3.986px 6.5px rgba(0, 0, 0, 0.1));
+        }
+        .swiper-slide-prev .item{
+            filter: drop-shadow(2.018px 3.986px 6.5px rgba(0, 0, 0, 0.1));
+        }
+        .mySwiper-parent{
+            padding: 0;
+            padding-bottom: 50px;
+        }
+        .swiper-slide-prev{
+            opacity: 1;
+        }
+    }
+    .swiper-slide{
+        opacity: 1;
+    }
+   
+}
+
+@include max-768 {
+
+   
+    .client-reviews {
+         .item .quote-text{
+            height: 150px;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            width: 100%;
+
+        }
+         .reviewer{
+            margin-top: 20px;
+        }
+        .content{
+            padding-top: 0;
+        }
+        .swiper-slide{
+            display: flex;
+            justify-content: center;
+        }
+        .general-title{
+            font-size: 21px;
+        }
+        margin-top: 25px;
+        .swiper-buttons{
+            display: none;
+        }
+        .sub-title{
+            margin-bottom: 20px;
+        }
+        .item{
+            filter:drop-shadow(2.018px 2.986px 6.5px rgba(0, 0, 0, 0.1));
+            padding: 30px 25px;
+        }
+        .swiper-slide-next .item , .swiper-slide-prev .item{
+            filter: none;
+        }
+        .swiper{
+            padding: 17px 12px ;
+        }
+        .row>*{
+            padding: 0;
+        }
+    }
+    
+    
+}
