@@ -325,7 +325,7 @@ a:focus, button:focus {
     -moz-column-gap: 0;
          column-gap: 0;
     justify-content: space-evenly;
-    row-gap: 30px;
+    row-gap: 20px;
   }
   .about .item {
     width: 290px;
@@ -503,7 +503,8 @@ a:focus, button:focus {
     width: 100%;
   }
   .features .mobile-hand-img {
-    max-width: 320px;
+    width: 320px;
+    max-width: 100%;
     bottom: 35px;
     top: unset;
     inset-inline-end: 0;
@@ -614,6 +615,9 @@ a:focus, button:focus {
   }
 }
 @media only screen and (max-width: 767px) {
+  .app-screens .swiper-pagination-bullet-active {
+    background-color: #02ad88;
+  }
   .app-screens .mySwiper-parent .frame {
     width: 54%;
     height: 105%;
@@ -709,7 +713,7 @@ a:focus, button:focus {
 }
 
 .ques-answer {
-  color: #010101;
+  color: #013161;
   width: 839px;
   padding-inline-start: 50px;
   font-size: 16px;
@@ -852,7 +856,7 @@ a:focus, button:focus {
 }
 
 .download-app .download-links a:hover {
-  background-color: #202020;
+  background-color: #02ad88;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -1446,7 +1450,7 @@ header {
 }
 .client-reviews .item .name {
   font-size: 16px;
-  color: #000000;
+  color: #013161;
   font-weight: 700;
   margin-inline-start: 10px;
 }
@@ -1470,6 +1474,8 @@ html[dir=ltr] .client-reviews .swiper-buttons div i {
   .client-reviews .swiper-pagination .swiper-pagination-bullet {
     opacity: 0.302;
     background-color: #000;
+    width: 6px;
+    height: 6px;
   }
   .client-reviews .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #02ad88;

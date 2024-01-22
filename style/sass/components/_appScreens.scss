@@ -79,6 +79,10 @@
 }
 
 @include max-768{
+    .app-screens .swiper-pagination-bullet-active{
+        background-color:  $main-color;
+
+    }
     .app-screens .mySwiper-parent .frame{
         width: 54%;
         height: 105%;

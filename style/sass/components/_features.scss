@@ -162,7 +162,8 @@
         width: 100%;
     }
     .features .mobile-hand-img{
-        max-width: 320px;
+        width: 320px;
+        max-width: 100%;
         bottom: 35px;
         top: unset;
         inset-inline-end: 0;
