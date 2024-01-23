@@ -127,7 +127,7 @@ $(".main-question").on("click", function(){
 // fixed header
 
 $(window).on("scroll" , function (){
-  if($(window).scrollTop() > 150){
+  if($(window).scrollTop() > 100){
     $("header").addClass("blur-header");
     $(".logo img").attr("src" , "images/medhal-logo-light.png")
     if($(window).width() > 992){
@@ -142,7 +142,9 @@ $(window).on("scroll" , function (){
     $("header").removeClass("fixed-header")
     $("header").removeClass("blur-header")
     $("header").removeClass("padding-8")
-    $(".logo img").attr("src" , "images/medhal-logo-dark.png")
+    if(!$("body").hasClass("pages-body")){
+      $(".logo img").attr("src" , "images/medhal-logo-dark.png");
+    }
   }
 })
 
@@ -157,14 +159,26 @@ let closeBtn = $(".closeBtn") , openBtn = $(".openBtn") ;
 openBtn.on("click", function(){
   
   if($(window).width() < 992){
-    if($(window).scrollTop() > 100){
-      $("header").toggleClass("header-mob");
+    if($("body").hasClass("pages-body")){
       let currentSrc = $(".logo img").attr("src");
-      if (currentSrc == "images/medhal-logo-dark.png") {
-        $(".logo img").attr("src", "images/medhal-logo-light.png");
-      } else {
+      if (currentSrc == "images/medhal-logo-light.png") {
         $(".logo img").attr("src", "images/medhal-logo-dark.png");
+      } else {
+        $(".logo img").attr("src", "images/medhal-logo-light.png");
       }
+      $(".pages-body header").toggleClass("pages-fixed-header");
+    }
+    if($(window).scrollTop() > 100){
+      if(!$("body").hasClass("pages-body")){
+        $("header").toggleClass("header-mob");
+        let currentSrc = $(".logo img").attr("src");
+        if (currentSrc == "images/medhal-logo-dark.png") {
+          $(".logo img").attr("src", "images/medhal-logo-light.png");
+        } else {
+          $(".logo img").attr("src", "images/medhal-logo-dark.png");
+        }
+      }
+     
     }
   
   }

@@ -14,17 +14,17 @@
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 60px;
+        margin-bottom: 0;
     }
 }
 .about .items{
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     column-gap: 32.6px;
+    margin-top: 55px;
 }
 .about .item {
     padding: 22px 24px 35px;
-    // min-height: 419px;
     border-radius: 15px;
     background-color: #ffffff;
     border: 2px solid #ededed;
@@ -35,12 +35,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // padding: 0 50px;
         width: 100%;
         min-height: 135px;
         margin-bottom: 25px;
         img{
-            // width: 105px;
             max-width: 100%;
             height: auto;
         }
@@ -71,10 +69,6 @@
         text-align-last: center;
         margin-bottom: 0;
     }
-    // img{
-    //     width: 127px;
-    //     margin-bottom: 28px;
-    // }
 }
 
 @include max-1300{
@@ -127,7 +121,6 @@
     }
     .about .para{
         font-size: 18px;
-        margin-bottom: 50px;
     }
     .about .sub-title{
         margin-bottom: 20px;

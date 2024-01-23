@@ -59,6 +59,20 @@ body {
   font-family: "Tajawal";
 }
 
+.read-more {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #808080;
+  text-align: center;
+  display: block;
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+.read-more:hover {
+  color: #02ad88;
+  text-decoration: underline;
+}
+
 .sub-title {
   font-size: 22px;
   color: #02ad88;
@@ -108,6 +122,40 @@ a:hover, button:hover {
   text-decoration: none;
 }
 a:focus, button:focus {
+  text-decoration: none;
+}
+
+.breadcrumb-sec {
+  padding: 25px 0;
+  margin-top: 130px;
+}
+
+.item-home::after {
+  content: " / ";
+  padding: 0;
+  color: #808080;
+  padding-inline-start: 3px;
+  padding-inline-end: 8px;
+}
+
+.breadcrumb {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.bread-link {
+  transition: all linear 0.2s;
+}
+.bread-link:hover {
+  color: #02ad88;
+}
+
+ol.breadcrumb li a, ol.breadcrumb li span {
+  transition: all 0.2s linear;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #808080;
   text-decoration: none;
 }
 
@@ -212,6 +260,13 @@ a:focus, button:focus {
   }
 }
 @media only screen and (max-width: 767px) {
+  .breadcrumb-sec {
+    margin-top: 100px;
+    padding: 10px 0;
+  }
+  .read-more {
+    margin-top: 25px;
+  }
   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
     padding-right: 20px;
     padding-left: 20px;
@@ -245,7 +300,7 @@ a:focus, button:focus {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 60px;
+  margin-bottom: 0;
 }
 
 .about .items {
@@ -253,6 +308,7 @@ a:focus, button:focus {
   grid-template-columns: repeat(4, 1fr);
   -moz-column-gap: 32.6px;
        column-gap: 32.6px;
+  margin-top: 55px;
 }
 
 .about .item {
@@ -353,7 +409,6 @@ a:focus, button:focus {
   }
   .about .para {
     font-size: 18px;
-    margin-bottom: 50px;
   }
   .about .sub-title {
     margin-bottom: 20px;
@@ -1876,9 +1931,34 @@ footer {
   margin-inline-start: 5px;
 }
 
+.footer-content .main-links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  margin-bottom: 25px;
+}
+.footer-content .main-links a {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #808080;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+}
+.footer-content .main-links a:hover {
+  color: #02ad88;
+}
+
 @media only screen and (max-width: 767px) {
   footer {
     padding-bottom: 40px;
+  }
+  .footer-content .main-links {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
   }
 }
 html[dir=ltr] .about .para, html[dir=ltr] .ques-answer {
@@ -1926,4 +2006,79 @@ html[dir=ltr] .download-parent {
 }
 html[dir=ltr] .client-reviews .item .icon {
   transform: scaleX(-1);
+}
+
+.pages-body .questions-parent {
+  max-width: 100%;
+  width: 100%;
+}
+.pages-body .ques-answer {
+  width: 1017px;
+}
+
+.pages-body .big-menu li a {
+  color: #013161;
+}
+.pages-body .big-menu li a:hover {
+  color: #02ad88;
+}
+.pages-body .header-links a {
+  background-color: #013161;
+}
+.pages-body .header-links a:hover {
+  background-color: #02ad88;
+}
+.pages-body .openBtn i {
+  color: #013161;
+}
+
+.page-general-sec {
+  padding-top: 25px;
+  padding-bottom: 80px;
+}
+.page-general-sec .page-sec-head {
+  font-size: 24px;
+  text-transform: capitalize;
+  color: #013161;
+  font-weight: 700;
+  text-align: start;
+  margin-bottom: 40px;
+}
+.page-general-sec .page-sec-para {
+  font-size: 18px;
+  line-height: 36px;
+  color: #013161;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1199px) {
+  .pages-body .ques-answer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .pages-body .big-menu li a {
+    color: #fff;
+  }
+  .pages-fixed-header .openBtn i {
+    color: #fff;
+  }
+  .pages-fixed-header .header-links a {
+    background-color: rgba(255, 255, 255, 0.102);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page-general-sec .page-sec-head {
+    font-size: 21px;
+    margin-bottom: 25px;
+  }
+  .page-general-sec {
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+  .page-general-sec .page-sec-para {
+    line-height: 1.7;
+    font-size: 17px;
+  }
 }/*# sourceMappingURL=main.css.map */

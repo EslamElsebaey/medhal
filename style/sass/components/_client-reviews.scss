@@ -95,8 +95,6 @@
             color: $main-color;
         }
         .quote-text{
-            // width: 295px;
-            // height: 139px;
             display: -webkit-box;
             -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
@@ -196,7 +194,6 @@ html[dir="ltr"]{
         .item{
             width: 100%;
             padding: 25px;
-            // padding: 25px 20px;
             filter: drop-shadow(2.018px 3.986px 6.5px rgba(0, 0, 0, 0.1));
         }
         .swiper-slide-prev .item{

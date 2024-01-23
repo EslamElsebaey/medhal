@@ -83,8 +83,6 @@
                     transform: translateY(-50%) rotate(180deg);
                 }
                 border-color: $main-color !important;
-                // border: 2px solid #b6b6b6 !important;
-                // outline: none !important;
             }
         }
        
@@ -132,7 +130,6 @@
             &:hover{
                 background-color: $second-color;
                 color: #fff;
-                // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             }
         }
     }
@@ -143,8 +140,6 @@
     padding-inline-end: 20px;
     padding-bottom: 50px;
     padding-top: 40px;
-    // width: 360px;
-    // height: 476px;
     border-radius: 15px;
     background-color: $second-color;
     .head{

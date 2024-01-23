@@ -17,6 +17,20 @@ body {
 
 
 
+.read-more{
+  font-size: 14px;
+  text-decoration: underline;
+  color: #808080;
+  text-align: center;
+  display: block;
+  margin-top: 40px;
+  text-transform: capitalize;
+  &:hover{
+    color: $main-color;
+    text-decoration: underline;
+  }
+}
+
 
 .sub-title{
   font-size: 22px;
@@ -71,6 +85,50 @@ a , button {
   background-color: transparent;
   cursor: pointer;
 }
+
+
+
+
+// bread crump 
+
+.breadcrumb-sec{
+  padding:25px 0;
+  margin-top: 130px;
+}
+
+.item-home::after{
+  content: " / ";
+  padding: 0;
+  color: #808080;
+  padding-inline-start: 3px;
+  padding-inline-end: 8px;
+}
+.breadcrumb{
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+ 
+}
+
+
+
+.bread-link{
+  transition: all linear .2s;
+  &:hover{
+      color: $main-color;
+  }
+}
+
+ol.breadcrumb li a, ol.breadcrumb li span {
+  transition: all 0.2s linear;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #808080;
+  text-decoration: none ;
+}
+
+//end of  bread crump 
+
 
 
 
@@ -182,6 +240,13 @@ a , button {
 }
 
 @include max-768 {
+  .breadcrumb-sec{
+    margin-top: 100px;
+    padding: 10px 0;
+  }
+  .read-more{
+    margin-top: 25px;
+  }
   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
     padding-right: 20px;
     padding-left: 20px;
