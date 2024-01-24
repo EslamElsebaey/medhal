@@ -201,7 +201,24 @@ openBtn.on("click", function(){
 
 
 
-
+if($(window).width() < 992 ){
+  $(".big-menu li a").on("click" , function(){
+    $(".navigation").slideUp(400);
+    $(".openBtn i").removeClass("fa-xmark");
+    $("body").removeClass("overflow-hidden") ;
+    if(!$("body").hasClass("pages-body")){
+      $("header").removeClass("header-mob");
+    }else{
+      $("header").removeClass("pages-fixed-header");
+      let currentSrc = $(".logo img").attr("src");
+    if (currentSrc == "images/medhal-logo-light.png") {
+      $(".logo img").attr("src", "images/medhal-logo-dark.png");
+    } else {
+      $(".logo img").attr("src", "images/medhal-logo-light.png");
+    }
+    }
+  })
+}
 
 
 
