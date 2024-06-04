@@ -59,13 +59,17 @@ body {
   font-family: "Tajawal";
 }
 
+.readmore-holder {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 .read-more {
   font-size: 14px;
   text-decoration: underline;
   color: #808080;
   text-align: center;
-  display: block;
-  margin-top: 40px;
   text-transform: capitalize;
 }
 .read-more:hover {
@@ -264,7 +268,7 @@ ol.breadcrumb li a, ol.breadcrumb li span {
     margin-top: 100px;
     padding: 10px 0;
   }
-  .read-more {
+  .readmore-holder {
     margin-top: 25px;
   }
   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
